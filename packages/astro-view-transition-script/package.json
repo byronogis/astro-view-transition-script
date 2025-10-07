@@ -2,7 +2,7 @@
   "name": "astro-view-transition-script",
   "type": "module",
   "version": "0.0.1-beta.1",
-  "description": "help you excute script while using astro view transition",
+  "description": "A utility function to execute a callback that compatibly with Astro's view transitions.",
   "author": "Byron <byronogis@outlook.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/byronogis",
@@ -39,11 +39,15 @@
     "prepublishOnly": "pnpm run build",
     "release": "pnpm publish",
     "typecheck": "tsc --noEmit",
+    "prepare": "astro sync",
     "test": "vitest",
     "clear": "rimraf dist"
   },
-  "dependencies": {},
+  "peerDependencies": {
+    "astro": "^5.0.0"
+  },
   "devDependencies": {
+    "astro": "^5.14.1",
     "typescript": "catalog:deps"
   }
 }

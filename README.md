@@ -12,13 +12,13 @@
 
 [![JSDocs][jsdocs-src]][jsdocs-href]
 
-help you excute script while using astro view transition
+A utility function to execute a callback that compatibly with Astro's view transitions.
 
 > [!NOTE]
 >
 > Rename `packages/astro-view-transition-script`.
 >
-> Replace `astro-view-transition-script`, `help you excute script while using astro view transition` and `byronogis` globally to use this template.
+> Replace `astro-view-transition-script`, `A utility function to execute a callback that compatibly with Astro's view transitions.` and `byronogis` globally to use this template.
 >
 
 ## Installation

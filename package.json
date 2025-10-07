@@ -4,7 +4,7 @@
   "version": "0.0.1-beta.1",
   "private": true,
   "packageManager": "pnpm@10.18.1",
-  "description": "help you excute script while using astro view transition",
+  "description": "A utility function to execute a callback that compatibly with Astro's view transitions.",
   "repository": {
     "type": "git",
     "url": "https://github.com/byronogis/astro-view-transition-script.git"
