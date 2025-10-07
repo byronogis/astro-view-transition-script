@@ -5,6 +5,7 @@
 [![npm version](https://img.shields.io/npm/v/astro-view-transition-script)](https://npmjs.com/package/astro-view-transition-script)
 [![npm downloads](https://img.shields.io/npm/dm/astro-view-transition-script)](https://npm.chart.dev/astro-view-transition-script)
 [![bundle size](https://img.shields.io/bundlephobia/minzip/astro-view-transition-script)](https://bundlephobia.com/package/astro-view-transition-script)
+[![install size](https://badgen.net/packagephobia/install/astro-view-transition-script)](https://packagephobia.com/result?p=astro-view-transition-script)
 [![codecov](https://img.shields.io/codecov/c/gh/byronogis/astro-view-transition-script)](https://codecov.io/gh/byronogis/astro-view-transition-script)
 [![license](https://img.shields.io/github/license/byronogis/astro-view-transition-script)](https://github.com/byronogis/astro-view-transition-script/blob/main/LICENSE)
 
@@ -13,13 +14,6 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 
 A utility function to execute a callback that compatibly with Astro's view transitions.
-
-> [!NOTE]
->
-> Rename `packages/astro-view-transition-script`.
->
-> Replace `astro-view-transition-script`, `A utility function to execute a callback that compatibly with Astro's view transitions.` and `byronogis` globally to use this template.
->
 
 ## Installation
 
@@ -36,21 +30,69 @@ npm install astro-view-transition-script
 yarn add astro-view-transition-script
 
 # pnpm
-pnpm install astro-view-transition-script
+pnpm add astro-view-transition-script
 
 # bun
 bun install astro-view-transition-script
 
 # deno
-deno install astro-view-transition-script
+deno install npm:astro-view-transition-script
 ```
 
 <!-- /automd -->
 
 ## Basic Usage
 
+```astro
+---
+// ...
+---
+
+<script>
+  import { withwithViewTransition } from 'astro-view-transition-script';
+
+  withViewTransition({
+    // ...
+  })
+</script>
+```
+
+## Example
+
 ```ts
-// usage
+/**
+ * apply theme on initial and navigating
+ */
+function applyTheme(doc) {
+  localStorage.theme === 'dark'
+    ? doc.documentElement.classList.add('dark')
+    : doc.documentElement.classList.remove('dark')
+}
+
+withViewTransition({
+  initial(state) {
+    applyTheme(state.document)
+  },
+  beforeSwap(state, e) {
+    applyTheme(state.document)
+  },
+})
+```
+
+```ts
+/**
+ * avoid smooth scroll when navigating back/forward
+ * @see https://github.com/withastro/astro/issues/10615#issuecomment-3289385496
+ */
+withViewTransition({
+  beforeSwap(state, e) {
+    state.document.documentElement.style.scrollBehavior
+      = e.navigationType === 'traverse' ? 'auto' : 'smooth'
+  },
+  done(state) {
+    state.document.documentElement.style.scrollBehavior = 'smooth'
+  },
+})
 ```
 
 <!-- automd:fetch url="gh:byronogis/.github/main/snippets/readme-contrib-node-pnpm.md" -->
@@ -95,7 +137,7 @@ Made by [@byronogis](https://github.com/byronogis) and [community](https://githu
 
 ---
 
-_🤖 auto updated with [automd](https://automd.unjs.io) (last updated: Wed Jan 29 2025)_
+_🤖 auto updated with [automd](https://automd.unjs.io) (last updated: Tue Oct 07 2025)_
 
 <!-- /automd -->
 
