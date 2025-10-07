@@ -63,19 +63,15 @@ deno install npm:astro-view-transition-script
 /**
  * apply theme on initial and navigating
  */
-function applyTheme(doc) {
+function applyTheme(state) {
   localStorage.theme === 'dark'
-    ? doc.documentElement.classList.add('dark')
-    : doc.documentElement.classList.remove('dark')
+    ? state.document.documentElement.classList.add('dark')
+    : state.document.documentElement.classList.remove('dark')
 }
 
 withViewTransition({
-  initial(state) {
-    applyTheme(state.document)
-  },
-  beforeSwap(state, e) {
-    applyTheme(state.document)
-  },
+  initial: applyTheme,
+  beforeSwap: applyTheme,
 })
 ```
 
