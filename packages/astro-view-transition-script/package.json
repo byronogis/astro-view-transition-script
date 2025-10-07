@@ -12,7 +12,7 @@
     "url": "https://github.com/byronogis/astro-view-transition-script.git"
   },
   "bugs": "https://github.com/byronogis/astro-view-transition-script/issues",
-  "keywords": [],
+  "keywords": ["astro", "view-transition", "utility", "withastro"],
   "sideEffects": false,
   "publishConfig": {
     "access": "public",
