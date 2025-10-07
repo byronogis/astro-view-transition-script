@@ -1,7 +1,7 @@
 {
   "name": "@astro-view-transition-script/monorepo",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "packageManager": "pnpm@10.18.1",
   "description": "A utility function to execute a callback that compatibly with Astro's view transitions.",

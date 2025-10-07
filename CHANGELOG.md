@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.2
+
+[compare changes](https://github.com/byronogis/astro-view-transition-script/compare/v0.0.1...v0.0.2)
+
+### 📖 Documentation
+
+- Update readme ([aed80e5](https://github.com/byronogis/astro-view-transition-script/commit/aed80e5))
+
+### ❤️ Contributors
+
+- Byronogis ([@byronogis](https://github.com/byronogis))
+
 ## v0.0.1
 
 [compare changes](https://github.com/byronogis/astro-view-transition-script/compare/v0.0.1-beta.1...v0.0.1)
