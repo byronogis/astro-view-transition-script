@@ -1,7 +1,7 @@
 {
   "name": "astro-view-transition-script",
   "type": "module",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1",
   "description": "A utility function to execute a callback that compatibly with Astro's view transitions.",
   "author": "Byron <byronogis@outlook.com>",
   "license": "MIT",
