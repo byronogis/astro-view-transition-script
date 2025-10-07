@@ -1,0 +1,6 @@
+{
+  "extends": "@astro-view-transition-script/typescript-config/tsconfig.base.json",
+  "include": [
+    "src"
+  ]
+}
