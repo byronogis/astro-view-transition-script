@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.0.3
+
+[compare changes](https://github.com/byronogis/astro-view-transition-script/compare/v0.0.2...v0.0.3)
+
+### 📖 Documentation
+
+- Update usage ([9b8fa66](https://github.com/byronogis/astro-view-transition-script/commit/9b8fa66))
+
+### 🏡 Chore
+
+- Lint ([c5627bd](https://github.com/byronogis/astro-view-transition-script/commit/c5627bd))
+
+### ❤️ Contributors
+
+- Byronogis ([@byronogis](https://github.com/byronogis))
+
 ## v0.0.2
 
 [compare changes](https://github.com/byronogis/astro-view-transition-script/compare/v0.0.1...v0.0.2)
